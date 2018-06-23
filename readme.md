@@ -11,9 +11,9 @@
 * `php artisan db:seed` для заполнения базы пользователями
 
 ### API роуты ###
-`api/user/login` - авторизация пользователя к API
-`api/user/register` - регистрация пользователя в API
-`api/users` - получение списка имён зарегистрированых пользователей
+* `api/user/login` - авторизация пользователя к API
+* `api/user/register` - регистрация пользователя в API
+* `api/users` - получение списка имён зарегистрированых пользователей
 
 ### Библиотеки ###
 * [tymondesigns/jwt-auth](https://github.com/tymondesigns/jwt-auth)
