@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Http\Request;
+use App\User;
 
 /*
 |--------------------------------------------------------------------------
@@ -14,7 +15,15 @@ use Illuminate\Http\Request;
 */
 
 Route::middleware('jwt.auth')->get('users', function (Request $request) {
-    return auth()->user();
+    
+    $users = User::all();
+    $names = [];
+
+    foreach ($users as $user) {
+        $names[] = $user->name;
+    }
+
+    return response()->json(compact('names'));
 });
 
 
