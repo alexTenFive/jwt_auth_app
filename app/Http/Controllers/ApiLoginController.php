@@ -8,6 +8,11 @@ use JWTAuth;
 
 class ApiLoginController extends Controller
 {
+    public function show()
+    {
+        return view('auth.login');
+    }
+
     public function login(Request $request) {
         $validator = Validator::make($request->all(), [
             'email' => 'required|string|email|max:255',

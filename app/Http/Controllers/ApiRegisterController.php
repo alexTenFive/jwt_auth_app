@@ -10,6 +10,10 @@ use JWTAuth;
 
 class ApiRegisterController extends Controller
 {
+    public function show()
+    {
+        return view('auth.register');
+    }
     /**
      * User register function
      */

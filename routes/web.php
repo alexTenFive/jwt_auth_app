@@ -14,3 +14,8 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/login', 'ApiLoginController@show');
+Route::get('/register', 'ApiRegisterController@show');
+
+Route::get('/home', 'HomeController@index');
