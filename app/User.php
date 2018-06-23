@@ -26,4 +26,16 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+     /**
+     * For remember_token disabling
+     */
+    public function setAttribute($key, $value)
+    {
+      $isRememberTokenAttribute = $key == $this->getRememberTokenName();
+      if (!$isRememberTokenAttribute)
+      {
+        parent::setAttribute($key, $value);
+      }
+    }
 }
